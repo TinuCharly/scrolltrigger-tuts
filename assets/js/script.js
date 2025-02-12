@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.ticker.lagSmoothing(0);
 
   const stickySection = document.querySelector(".sticky");
-  const stickyHeight = window.innerHeight * 8;
+  const stickyHeight = window.innerHeight * 4;
   const services = document.querySelectorAll(".service");
   const indicator = document.querySelector(".indicator");
   const currentCount = document.querySelector(".current-count");
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const serviceHeight = 60;
   const imgHeight = 250;
 
-  serviceCopy.textContent = servicesCopy[0][0];
+  serviceCopy.innerHTML = servicesCopy[0].join("");
   let currentSplitText = new SplitType(serviceCopy, { types: "lines" });
 
   const measureContainer = document.createElement("div");
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const animateTextChange = (index) => {
     return new Promise((resolve) => {
-      gsap.to(currentSplitText.lines, {
+      gsap.to(currentSplitText.words, {
         opacity: 0,
         y: -20,
         duration: 0.5,
@@ -65,19 +65,18 @@ document.addEventListener("DOMContentLoaded", () => {
         onComplete: () => {
           currentSplitText.revert();
 
-          const newText = servicesCopy[index][0];
-          serviceCopy.textContent = newText;
+          serviceCopy.innerHTML = servicesCopy[index].join("");
 
           currentSplitText = new SplitType(serviceCopy, {
-            types: "lines",
+            types: "lines, words",
           });
 
-          gsap.set(currentSplitText.lines, {
+          gsap.set(currentSplitText.words, {
             opacity: 0,
             y: 20,
           });
 
-          gsap.to(currentSplitText.lines, {
+          gsap.to(currentSplitText.words, {
             opacity: 1,
             y: 0,
             duration: 0.5,
@@ -102,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const scrollPosition = Math.max(0, self.scroll() - window.innerHeight);
       const activeIndex = Math.floor(scrollPosition / scrollPerService);
+      // const activeIndex = Math.floor(self.progress * (services.length - 1));
 
       if (
         activeIndex >= 0 &&
@@ -126,13 +126,13 @@ document.addEventListener("DOMContentLoaded", () => {
             y: -(activeIndex * imgHeight),
             duration: 0.5,
             ease: "power3.inOut",
-            overwrite: true
+            overwrite: true,
           }),
 
           gsap.to(currentCount, {
             innerText: activeIndex + 1,
             snap: {
-              innerText: 1
+              innerText: 1,
             },
             duration: 0.3,
             ease: "power3.out",
@@ -144,17 +144,14 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  
+  services.forEach((service, index) => {
+    service.addEventListener("click", () => {
+      const targetScroll = window.innerHeight + index * scrollPerService;
 
-services.forEach((service, index) => {
-  service.addEventListener("click", () => {
-    const targetScroll = window.innerHeight + index * scrollPerService;
-
-    lenis.scrollTo(targetScroll, {
-      duration: 1, // Smooth scroll duration
-      easing: (t) => 1 - Math.pow(1 - t, 4), // Ease-out effect
+      lenis.scrollTo(targetScroll, {
+        duration: 1, // Smooth scroll duration
+        easing: (t) => 1 - Math.pow(1 - t, 4), // Ease-out effect
+      });
     });
   });
-});
-
 });
