@@ -1,10 +1,10 @@
 export const servicesCopy = [
   [
-    'I build high-performance web apps with ',
-    '<a href="https://react.dev/" target="_blank" class="custom-link">React</a>',
+    'Lorem Ipsum',
+    '<a href="https://youtu.be/xvFZjo5PgG0?si=Im02GjMXTwogXvwR" target="_blank" class="custom-link">Dont open</a>',
     ' & ',
-    '<a href="https://nextjs.org/" target="_blank" class="custom-link">Next.js</a>',
-    ', from UI/UX design to clean, scalable code. Pixel-perfect, responsive, and accessible—every detail matters.',
+    '<a href="https://youtu.be/xvFZjo5PgG0?si=Im02GjMXTwogXvwR" target="_blank" class="custom-link">bad video</a>',
+    ', dolor si amet epsom dolor si amet epsom dolor si amet ',
   ],
   [
     "Our brand and event design services create compe;lling visal identities that leave lasting impressions. We craft cohesive brand experiences and design engaging event spaces that tell your story",
