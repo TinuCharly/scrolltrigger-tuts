@@ -32,8 +32,8 @@ This project is a **React-based implementation** of a scroll-triggered animation
    The project should be available at `http://localhost:3000`
 
 ## 🛠️ Technologies Used
-- **React** (Next.js if applicable)
-- **GSAP** for animations
+- **Nextjs** 
+- **Framer motion** for animations
 - **CSS/Tailwind** for styling
 
 ## 🎥 Credits
