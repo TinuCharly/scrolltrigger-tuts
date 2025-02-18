@@ -1,12 +1,12 @@
-# Scroll Trigger Section in React
+# Scroll Trigger Section in HTML, CSS & JavaScript
 
-This project is a **React-based implementation** of a scroll-triggered animation inspired by Codegrid's tutorial on ScrollTrigger + GSAP Sorcery: Content Transitions That Reacts and Engages. Since the original code was not publicly available, I recreated it in React for easier integration into modern web projects.
+This project is a **vanilla HTML, CSS, and JavaScript implementation** of a scroll-triggered animation inspired by codegrid's tutorial on ScrollTrigger + GSAP Sorcery: Content Transitions That Reacts and Engages . Since the original code was not publicly available, I recreated it for easier access and learning.
 
 ## 📌 Features
 - **Scroll-triggered animations** using GSAP & ScrollTrigger
 - **Fully responsive** design
-- **Optimized for performance** in React
-- **Reusable components** for easy integration
+- **Optimized for performance**
+- **Simple and easy-to-understand code structure**
 
 ## 🚀 Demo
 🔗 [Live Demo](your-demo-link)
@@ -14,30 +14,20 @@ This project is a **React-based implementation** of a scroll-triggered animation
 ## 📂 Installation & Usage
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/yourusername/your-repo-name.git](https://github.com/TinuCharly/scrolltrigger-tuts
+   cd scrolltrigger-tuts
    ```
 
-2. **Install dependencies**
-   ```bash
-   npm install  # or yarn install
-   ```
-
-3. **Run the project**
-   ```bash
-   npm run dev  # or yarn dev
-   ```
-
-4. **Open in browser**  
-   The project should be available at `http://localhost:3000`
+2. **Open `index.html` in your browser**
+   Simply open the file in your preferred browser to see the animation in action.
 
 ## 🛠️ Technologies Used
-- **Nextjs** 
-- **Framer motion** for animations
-- **CSS/Tailwind** for styling
+- **HTML** for structure
+- **CSS** for styling
+- **JavaScript (GSAP & ScrollTrigger)** for animations
 
 ## 🎥 Credits
-This project was inspired by **[YouTuber's Name]**. I recreated the effect in React to help developers who prefer component-based development.
+This project was inspired by **CODEGRID**. I recreated the effect in HTML, CSS, and JavaScript to help developers who prefer a simple, framework-free approach.
 
 ## 📜 License
 This project is open-source and free to use. Feel free to modify and improve it! 😊
